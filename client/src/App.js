@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Routes from './components/routing/Routes';
+import Login from './components/auth/Login';
 
 // Redux
 import {Provider} from 'react-redux';
@@ -32,7 +33,7 @@ const App = () => {
                 <Fragment>
                         <Navbar/>
                             <Switch>
-                                <Route exact path='/' component={Landing}/>
+                                <Route exact path='/' component={Login}/>
                                 <Route component={Routes}/>
                             </Switch>
                 </Fragment>
