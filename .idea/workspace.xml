@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/auth/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/auth/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.js" afterDir="false" />
@@ -88,7 +89,7 @@
       <workItem from="1578152911859" duration="5000" />
       <workItem from="1578157351921" duration="25985000" />
       <workItem from="1578242147182" duration="11049000" />
-      <workItem from="1578266207757" duration="3351000" />
+      <workItem from="1578266207757" duration="6002000" />
     </task>
     <servers />
   </component>
@@ -108,10 +109,10 @@
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="525" y="182" key="SettingsEditor/0.0.1920.1039@0.0.1920.1039" timestamp="1578047836225" />
-    <state x="497" y="342" width="628" height="528" key="find.popup" timestamp="1578267813305">
+    <state x="497" y="342" width="628" height="528" key="find.popup" timestamp="1578272795613">
       <screen x="0" y="0" width="1280" height="983" />
     </state>
-    <state x="497" y="342" width="628" height="528" key="find.popup/0.0.1280.983@0.0.1280.983" timestamp="1578267813305" />
+    <state x="497" y="342" width="628" height="528" key="find.popup/0.0.1280.983@0.0.1280.983" timestamp="1578272795613" />
     <state x="746" y="361" width="628" height="528" key="find.popup/0.0.1920.1039@0.0.1920.1039" timestamp="1578199568208" />
     <state x="714" y="246" width="672" height="678" key="search.everywhere.popup" timestamp="1578049519343">
       <screen x="0" y="0" width="1920" height="1039" />
