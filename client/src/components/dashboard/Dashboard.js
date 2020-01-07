@@ -19,9 +19,9 @@ const Dashboard = ({
   return loading && profile === null ? (
     <Spinner />
   ) : (
-      <Row className={'mt-3'}>
+      <Row className={'mt-3 p-3'}>
         <Col>
-          <Card bg="primary" text="white" style={{ width: '18rem' }} className={'text-center'}>
+          <Card text="white" style={{ width: '18rem', backgroundColor: '#41A7FF' }} className={'text-center'}>
             <Card.Body>
               <Card.Text>
                 <Link to='/leads' style={{ color: '#fff' }}>Leads e Follow</Link>

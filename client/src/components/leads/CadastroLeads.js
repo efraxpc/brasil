@@ -10,7 +10,9 @@ import HorizontalStatusSelect from '../horizontalStatusSelect/HorizontalStatusSe
 import "./style.css";
 
 import {Row, Col, Card, Form} from 'react-bootstrap';
-import { Input } from 'antd';
+import { Input, Select } from 'antd';
+const { Option } = Select;
+
 
 function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
@@ -91,7 +93,7 @@ const CadastroLeads = ({}) => {
                         </Col>
                     </Row>
                 </Col>
-                <Col>
+                <Col style={{zIndex: 3}}>
                     <Row className={'justify-content-center align-items-center'}>
                         <Col xs={12} md={10}>
                             <Card bg="light">

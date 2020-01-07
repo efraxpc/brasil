@@ -18,11 +18,11 @@ function FilledMenu(props) {
             //defaultSelectedKeys={['2']}
             style={{lineHeight: '64px'}}
         >
-            <Menu.Item key="1"> <Link to='/leads'>Leads</Link></Menu.Item>
+            <Menu.Item key="1"> <Link to='/leads' style={{color:'#fff'}}>Leads</Link></Menu.Item>
             <Menu.Item key="2" style={{float: "right"}}>
-                <a onClick={props.logout} href='#!'>
+                <a onClick={props.logout} href='#!' style={{color:'#fff'}}>
                     <i className='fas fa-sign-out-alt'/>{' '}
-                    <span className='hide-sm'>Sair</span>
+                    <span className='hide-sm' >Sair</span>
                 </a>
             </Menu.Item>
 
