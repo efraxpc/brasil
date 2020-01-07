@@ -30,7 +30,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-        <Row  style={{backgroundImage:`url(${backgroundImage})`,  height: '100%'}}>
+        <Row  style={{backgroundImage:`url(${backgroundImage})`,  height: '100%', width: '100%', margin:0}}>
           <Col>
 
           </Col>

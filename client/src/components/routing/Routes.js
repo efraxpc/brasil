@@ -17,7 +17,7 @@ import PrivateRoute from '../routing/PrivateRoute';
 
 const Routes = () => {
   return (
-    <section className='container-fluid' style={{height: '100%'}}>
+    <section className='container-fluid' style={{height: '100%',padding:0}}>
       <Alert />
       <Switch>
         <Route exact path='/login' component={Login} />
