@@ -10,8 +10,7 @@ import HorizontalStatusSelect from '../horizontalStatusSelect/HorizontalStatusSe
 import "./style.css";
 
 import {Row, Col, Card, Form} from 'react-bootstrap';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faWhatssap} from "@fortawesome/free-solid-svg-icons";
+import { Input } from 'antd';
 
 function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
@@ -19,8 +18,6 @@ function onChange(e) {
 
 const data = ['1° CONTATO', 'VISITA UNIDADE', 'OFICINA', 'OFERTA', 'MATRICULADO'];
 const dataHorizontal = ['POUCO', 'MEDIO', 'MUITO'];
-
-
 
 
 const CadastroLeads = ({}) => {
@@ -33,78 +30,68 @@ const CadastroLeads = ({}) => {
             </Row>
             <Row>
                 <Col md={4}>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>NOME POSSÍVEL ALUNO</Form.Label>
-                                <Form.Control type="email" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
+                    <label style={{width:'100%'}}>
+                        NOME POSSÍVEL ALUNO
+                        <Input size="large" placeholder="" />
+                    </label>
                 </Col>
                 <Col md={4}>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>IDADE POSSÍVEL ALUNO</Form.Label>
-                                <Form.Control type="email"/>
-                            </Form.Group>
-                        </Col>
-                    </Row>
+                    <label style={{width:'100%'}}>
+                        NOME IDADE POSSÍVEL ALUNO
+                        <Input size="large" placeholder="" />
+                    </label>
                 </Col>
                 <Col md={4}>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>NOME DO RESPONSÁVEL</Form.Label>
-                                <Form.Control type="email" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
+                    <label style={{width:'100%'}}>
+                        NOME NOME DO RESPONSÁVEL
+                        <Input size="large" placeholder="" />
+                    </label>
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <h3>INFORMAÇÕES DE CONTATO</h3>
-                </Col>
-            </Row>
-            <Row>
-                <Col md={4}>
+                <Col md={8}>
                     <Row>
                         <Col>
+                            <h3>INFORMAÇÕES DE CONTATO</h3>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={6}>
                             <Row>
-                                <Col md={9}>
-                                    <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>TELEFONE</Form.Label>
-                                        <Form.Control type="email" />
-                                    </Form.Group>
+                                <Col md={10}>
+                                    <label style={{width:'100%'}}>
+                                        TELEFONE
+                                        <Input size="large" placeholder="" />
+                                    </label>
                                 </Col>
-                                <Col md={3} className={'my-auto'}>
+                                <Col md={2} className={'my-auto'}>
                                     <Checkbox onChange={onChange}>
-                                        <i className="fab fa-whatsapp mt-2" style={{color:'#25d366',fontSize: 24}}></i>
+                                        <i className="fab fa-whatsapp mt-2"
+                                           style={{color: '#25d366', fontSize: 24}}></i>
                                     </Checkbox>
                                 </Col>
                             </Row>
                         </Col>
+                        <Col md={6}>
+                            <Row>
+                                <Col md={5}>
+                                    <label>
+                                        EMAIL
+                                        <Input size="large" placeholder="" />
+                                    </label>
+                                </Col>
+                                <Col md={2} className={'my-auto text-center'}>
+                                    @
+                                </Col>
+                                <Col md={5} className={'my-auto'}>
+                                    <SpecialSelect/>
+                                </Col>
+                            </Row>
+
+                        </Col>
                     </Row>
                 </Col>
-                <Col md={4}>
-                    <Row>
-                        <Col md={5}>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>EMAIL</Form.Label>
-                                <Form.Control type="email" />
-                            </Form.Group>
-                        </Col>
-                        <Col md={2} className={'my-auto text-center'}>
-                            @
-                        </Col>
-                        <Col md={5} className={'my-auto'}>
-                            <SpecialSelect/>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col md={4}>
+                <Col>
                     <Row className={'justify-content-center align-items-center'}>
                         <Col xs={12} md={10}>
                             <Card bg="light">
@@ -120,13 +107,13 @@ const CadastroLeads = ({}) => {
                         </Col>
                     </Row>
                     <Row className={'justify-content-center align-items-center mt-3'}>
-                        <Col xs={12} md={10} >
-                            <Card bg="light" >
+                        <Col xs={12} md={10}>
+                            <Card bg="light">
                                 <Card.Body className={'pt-3'}>
                                     <Row className={'my-auto'}>
                                         <Col md={4} className={'my-auto'}>
-                                            <p className={'pt-3 mb-0'} style={{position:'relative'}}>NIVEL*</p>
-                                            <p style={{fontSize:9, position:'relative'}}>de interesse</p>
+                                            <p className={'pt-3 mb-0'} style={{position: 'relative'}}>NIVEL*</p>
+                                            <p style={{fontSize: 9, position: 'relative'}}>de interesse</p>
                                         </Col>
                                         <Col md={8} className={'p-0 my-auto'}>
                                             <HorizontalStatusSelect items={dataHorizontal}/>
@@ -138,7 +125,46 @@ const CadastroLeads = ({}) => {
                     </Row>
                 </Col>
             </Row>
+            <Row className={'row-adicional-information'}>
+                <Col>
+                    <Row>
+                        <Col>
+                            <h3>INFORMAÇÕES COMPLEMENTARES</h3>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}>
+                            <Row>
+                                <Col>
+                                    ESCOLA
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <SpecialSelect/>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col md={4}>
+                            <Row>
+                                <Col>
+                                    TURNO
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Row>
+                                        <Col>
+                                            <SpecialSelect/>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Col>
 
+            </Row>
         </Fragment>
     );
 };

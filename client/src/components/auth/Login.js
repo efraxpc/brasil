@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 import { Row, Col } from 'react-bootstrap';
+import backgroundImage from './fundo-metodo-min.png'
+import logo from './logo.png'
+
+import "./style.css";
+
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -25,43 +30,50 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-      <Fragment>
-        <Row className={'m-3'}>
+        <Row  style={{backgroundImage:`url(${backgroundImage})`,  height: '100%'}}>
           <Col>
-            <h1 className='large text-primary'>Entre</h1>
-            <p className='lead'>
-              <i className='fas fa-user' /> Olá! Digite o seu e-mail
-            </p>
-            <form className='form' onSubmit={e => onSubmit(e)}>
-              <div className='form-group'>
-                <input
-                    type='email'
-                    placeholder='Email Address'
-                    name='email'
-                    value={email}
-                    onChange={e => onChange(e)}
-                    required
-                />
-              </div>
-              <div className='form-group'>
-                <input
-                    type='password'
-                    placeholder='Password'
-                    name='password'
-                    value={password}
-                    onChange={e => onChange(e)}
-                    minLength='6'
-                />
-              </div>
-              <input type='submit' className='btn btn-primary' value='Continuar' />
-            </form>
-            <p className='my-1'>
-              Ainda nao tem comta? <Link to='/register'>Criar conta</Link>
-            </p>
-          </Col>
-        </Row>
 
-      </Fragment>
+          </Col>
+          <Col>
+            <Row>
+              <Col>
+                <h1 className='large' style={{color:'#41A7FF'}}>Entre</h1>
+                <p className='lead'>
+                  <i className='fas fa-user' /> Olá! Digite o seu e-mail
+                </p>
+                <form className='form' onSubmit={e => onSubmit(e)}>
+                  <div className='form-group'>
+                    <input
+                        type='email'
+                        placeholder='Email Address'
+                        name='email'
+                        value={email}
+                        onChange={e => onChange(e)}
+                        required
+                    />
+                  </div>
+                  <div className='form-group'>
+                    <input
+                        type='password'
+                        placeholder='Password'
+                        name='password'
+                        value={password}
+                        onChange={e => onChange(e)}
+                        minLength='6'
+                    />
+                  </div>
+                  <input type='submit' className='btn btn-primary' value='Continuar' />
+                </form>
+              </Col>
+            </Row>
+            <Row className={'mt-logo-login'}>
+              <Col>
+                <img src={logo} alt="logo"/>
+              </Col>
+            </Row>
+          </Col>
+
+        </Row>
   );
 };
 

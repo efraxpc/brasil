@@ -30,13 +30,13 @@ const App = () => {
     return (
         <Provider store={store}>
             <Router>
-                <Fragment>
+                <div style={{height: '100%'}}>
                         <Navbar/>
                             <Switch>
                                 <Route exact path='/' component={Login}/>
                                 <Route component={Routes}/>
                             </Switch>
-                </Fragment>
+                </div>
             </Router>
         </Provider>
     );
