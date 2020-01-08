@@ -89,7 +89,6 @@ const CadastroLeads = ({}) => {
                                     <SpecialSelect/>
                                 </Col>
                             </Row>
-
                         </Col>
                     </Row>
                 </Col>
