@@ -86,7 +86,10 @@ const CadastroLeads = ({}) => {
                                     @
                                 </Col>
                                 <Col md={5} className={'my-auto'}>
-                                    <SpecialSelect/>
+                                    <SpecialSelect
+                                        data={['GMAIL.COM', 'OUTLOOK.COM', 'YAHOO.COM', 'ZOHO.COM']}
+                                        placeholder={'Escolha um dominio'}
+                                    />
                                 </Col>
                             </Row>
                         </Col>
@@ -142,7 +145,15 @@ const CadastroLeads = ({}) => {
                             </Row>
                             <Row>
                                 <Col>
-                                    <SpecialSelect/>
+                                    <SpecialSelect
+                                        data={[
+                                        'ESCOLA ADVENTISTA DO BAIRRO',
+                                        'ESCOLA SAGRADO CORACAO DE MARIA',
+                                        'COLÉGIO OBJETIVO',
+                                        'MAPLE BEAR']}
+
+                                        placeholder={'Escolha uma escola'}
+                                    />
                                 </Col>
                             </Row>
                         </Col>
@@ -154,17 +165,66 @@ const CadastroLeads = ({}) => {
                             </Row>
                             <Row>
                                 <Col>
-                                    <Row>
-                                        <Col>
-                                            <SpecialSelect/>
-                                        </Col>
-                                    </Row>
+                                    <Select style={{width:'100%'}}>
+                                        <Option value="manha">MANHA</Option>
+                                        <Option value="tarde">TARDE</Option>
+                                        <Option value="noite">NOITE</Option>
+                                        <Option value="integral">INTEGRAL</Option>
+                                    </Select>
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
                 </Col>
+            </Row>
+            <Row className={'leads-redes'}>
+                <Col>
+                    <Row>
+                        <Col>
+                            <h3>LEADS REDES</h3>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={3}>
+                            <label style={{width:'100%'}}>
+                                NOME DO PERFIL
+                                <Input size="large" placeholder="" />
+                            </label>
+                        </Col>
+                        <Col md={1} className={'my-auto'}>
+                            <Checkbox onChange={onChange}>
+                                <i className="fab fa-whatsapp mt-2"
+                                   style={{color: '#25d366', fontSize: 24}}></i>
+                            </Checkbox>
+                        </Col>
+                        <Col md={1} className={'my-auto'}>
+                            <Checkbox onChange={onChange}>
+                                <i className="fab fa-facebook mt-2"
+                                   style={{color: '#3b5998', fontSize: 24}}></i>
+                            </Checkbox>
+                        </Col>
+                        <Col md={1} className={'my-auto'}>
+                            <Checkbox onChange={onChange}>
+                                <i className="fab fa-instagram mt-2"
+                                   style={{color: '#cd486b', fontSize: 24}}></i>
+                            </Checkbox>
+                        </Col>
+                        <Col md={1} className={'my-auto'}>
+                            <Checkbox onChange={onChange}>
+                                <i className="fas fa-globe mt-2"
+                                   style={{color: '#000', fontSize: 24}}></i>
+                            </Checkbox>
+                        </Col>
+                        <Col md={3}>
+                            <label style={{width:'100%'}}>
+                                URL PERFIL/EMAIL/TELEFONE
+                                <Input size="large" placeholder="" />
+                            </label>
+                        </Col>
 
+
+                    </Row>
+                </Col>
             </Row>
         </Fragment>
     );

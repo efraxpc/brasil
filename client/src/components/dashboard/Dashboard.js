@@ -19,7 +19,7 @@ const Dashboard = ({
   return loading && profile === null ? (
     <Spinner />
   ) : (
-      <Row className={'mt-3 p-3'}>
+      <Row className={'p-3'}>
         <Col>
           <Card text="white" style={{ width: '18rem', backgroundColor: '#41A7FF' }} className={'text-center'}>
             <Card.Body>
@@ -32,7 +32,6 @@ const Dashboard = ({
       </Row>
   );
 };
-
 
 
 Dashboard.propTypes = {

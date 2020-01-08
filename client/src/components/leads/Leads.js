@@ -10,7 +10,7 @@ const {TabPane} = Tabs;
 const Leads = () => {
     return (
         <Fragment>
-            <Row style={{ padding: 50 }}>
+            <Row className={'pr-3 pl-3'}>
                 <Col>
                     <Tabs defaultActiveKey="1">
                         <TabPane

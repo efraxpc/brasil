@@ -7,18 +7,17 @@ const { Option } = Select;
 
 let index = 0;
 
-const SpecialSelect = ( ) => {
-    const [items, setItems] = useState(['GMAIL.COM', 'OUTLOOK.COM', 'YAHOO.COM', 'ZOHO.COM']);
+const SpecialSelect = ( {data, placeholder} ) => {
+    const [items, setItems] = useState(data);
 
     const addItem = () => {
         setItems([...items,`New item ${index++}`]);
     };
-
     return (
 
         <Select
             style={{ width: '100%' }}
-            placeholder="DOMINIO"
+            placeholder={placeholder}
             dropdownRender={menu => (
                 <div>
                     {menu}
